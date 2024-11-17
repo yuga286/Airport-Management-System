@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }}</h1>
+<h1>Area of the Shop: {{ area_of_the_shop }}</h1>
+<h1>Shop Type: {{ shop_type}}</h1>
+<h1>Gate Number Of the Shop: {{gate_number_of_the_shop}}</h1>
+<h1>Airport: {{ airport_name}}</h1>
+<h2>Status of the Shop: {{status}}</h2>
+<!-- <a href="http://airplane_mode.com:8000/ticket-booking/new?flight={{ doc.Flight }}&flight_price={{ doc.flight_price }}" class="btn btn-primary">Book Ticket</a> -->
+
+{% endblock %}
