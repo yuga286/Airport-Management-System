@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "tenant_information_section",
-  "name1",
+  "shop_keeper_name",
   "column_break_eaok",
   "email",
   "contract_details_section",
@@ -35,11 +35,6 @@
    "fieldname": "tenant_information_section",
    "fieldtype": "Section Break",
    "label": "Tenant Information"
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Shop Keeper Name"
   },
   {
    "fieldname": "column_break_eaok",
@@ -133,27 +128,32 @@
   },
   {
    "default": "0",
+   "fieldname": "enable_rent_reminder",
+   "fieldtype": "Check",
+   "label": "Enable Rent Reminder"
+  },
+  {
+   "fieldname": "shop_keeper_name",
+   "fieldtype": "Data",
+   "label": "Shop Keeper Name"
+  },
+  {
+   "default": "0",
    "fieldname": "is_published",
    "fieldtype": "Check",
-   "label": "Is Published?"
+   "label": "Is_Published?"
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
-  },
-  {
-   "default": "0",
-   "fieldname": "enable_rent_reminder",
-   "fieldtype": "Check",
-   "label": "Enable Rent Reminder"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-11-15 04:55:42.123480",
+ "modified": "2024-11-24 03:55:32.609532",
  "modified_by": "Administrator",
  "module": "Mode",
  "name": "Shop Info",
@@ -173,7 +173,7 @@
    "write": 1
   }
  ],
- "route": "shops",
+ "route": "portl",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

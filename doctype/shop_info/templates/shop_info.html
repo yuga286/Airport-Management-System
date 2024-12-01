@@ -1,12 +1,53 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title |e }}</h1>
-<h1>Area of the Shop: {{ area_of_the_shop }}</h1>
-<h1>Shop Type: {{ shop_type}}</h1>
-<h1>Gate Number Of the Shop: {{gate_number_of_the_shop}}</h1>
-<h1>Airport: {{ airport_name}}</h1>
-<h2>Status of the Shop: {{status}}</h2>
-<!-- <a href="http://airplane_mode.com:8000/ticket-booking/new?flight={{ doc.Flight }}&flight_price={{ doc.flight_price }}" class="btn btn-primary">Book Ticket</a> -->
+<style>
+  .shop-details-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+  }
 
+  .shop-details-container h1,
+  .shop-details-container h2 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .shop-title {
+    color: #0056b3;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .shop-detail {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #555;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .status {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #28a745;
+  }
+</style>
+
+<div class="shop-details-container">
+  <h1 class="shop-title">{{ title |e }}</h1>
+  <p class="shop-detail">Area of the Shop: <span class="highlight">{{ area_of_the_shop }}</span></p>
+  <p class="shop-detail">Shop Type: <span class="highlight">{{ shop_type }}</span></p>
+  <p class="shop-detail">Gate Number of the Shop: <span class="highlight">{{ gate_number_of_the_shop }}</span></p>
+  <p class="shop-detail">Airport: <span class="highlight">{{ airport_name }}</span></p>
+  <h2 class="status">Status of the Shop: <span class="highlight">{{ status }}</span></h2>
+</div>
 {% endblock %}

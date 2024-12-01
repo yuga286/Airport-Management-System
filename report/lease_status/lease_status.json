@@ -10,15 +10,16 @@
  "is_standard": "Yes",
  "json": "{}",
  "letterhead": null,
- "modified": "2024-10-25 22:11:16.620110",
+ "modified": "2024-11-27 05:26:02.997011",
  "modified_by": "Administrator",
  "module": "Mode",
  "name": "Lease Status",
  "owner": "Administrator",
  "prepared_report": 0,
+ "query": "SELECT \n    airport_name AS \"Airport\",\n    COUNT(CASE WHEN status = 'Available for lease' THEN 1 END) AS \"Available Shop\",\n    COUNT(CASE WHEN status = 'On lease' THEN 1 END) AS \"Leased Shop\",\n    COUNT(name) AS \"Total Shop\"\nFROM \n    `tabShop Info`\nGROUP BY \n    airport_name;\n",
  "ref_doctype": "Shop Info",
  "report_name": "Lease Status",
- "report_type": "Report Builder",
+ "report_type": "Query Report",
  "roles": [
   {
    "role": "System Manager"
